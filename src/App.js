@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import React from 'react';
+import { Row, Col } from 'react-grid-system';
 
 function Link(props) {
   return <a className={"link " + (props.mode === "dark" ? "link--dark" : "link--light")} href={props.url} rel="noreferrer" target="_blank">{props.title}</a>
@@ -9,9 +10,17 @@ function Link(props) {
 function Card(props) {
   return (
     <div className="card">
+    <div className="card__bookmark">
+      {props.type}
+    </div>
       <div className="card__header">
         <div className="card__header__image">
           <img src={props.image} alt={props.title} />
+        </div>
+        <div className="card__header__content">
+          <div className="card__header__content__title">{props.date}</div>
+          <div className="card__header__content__divider"></div>
+          <div className="card__header__content__subtitle">{props.duration}</div>
         </div>
       </div>
       <div className="card__body">
@@ -73,8 +82,19 @@ class App extends React.Component {
       <>
       <Jumbotron title="India's Most Trusted Masterclasses" subtitle="Making Beauty Accessible & Affordable" />
       <Container>
-        <Card image="https://pankhuri.co/master-class/_next/image?url=https%3A%2F%2Fmedia.pankhuri.co%2FKhadiData%2Fcourse_705%2Fcid705_131946.jpg&w=3840&q=75" title="Making Of Henna Paste And Cone" author="Komal" price={25} date="31 Oct" duration="60 minutes" />
-        </Container>
+        <Row>
+          <Col xs={3}>
+          </Col>
+          <Col xs={9}>
+            <Row>
+              <Card type="Recorded" image="https://pankhuri.co/master-class/_next/image?url=https%3A%2F%2Fmedia.pankhuri.co%2FKhadiData%2Fcourse_705%2Fcid705_131946.jpg&w=3840&q=75" title="Making Of Henna Paste And Cone" author="Komal" price={25} date="31 Oct" duration="60 minutes" />
+              <Card type="Recorded" image="https://pankhuri.co/master-class/_next/image?url=https%3A%2F%2Fmedia.pankhuri.co%2FKhadiData%2Fcourse_705%2Fcid705_131946.jpg&w=3840&q=75" title="Making Of Henna Paste And Cone" author="Komal" price={25} date="31 Oct" duration="60 minutes" />
+              <Card type="Recorded" image="https://pankhuri.co/master-class/_next/image?url=https%3A%2F%2Fmedia.pankhuri.co%2FKhadiData%2Fcourse_705%2Fcid705_131946.jpg&w=3840&q=75" title="Making Of Henna Paste And Cone" author="Komal" price={25} date="31 Oct" duration="60 minutes" />
+              <Card type="Recorded" image="https://pankhuri.co/master-class/_next/image?url=https%3A%2F%2Fmedia.pankhuri.co%2FKhadiData%2Fcourse_705%2Fcid705_131946.jpg&w=3840&q=75" title="Making Of Henna Paste And Cone" author="Komal" price={25} date="31 Oct" duration="60 minutes" />
+            </Row>
+          </Col>
+        </Row>
+      </Container>
       </>
     )
   }
