@@ -297,7 +297,7 @@ code {
   padding: 64px 0px;
   background: white;
   display: grid;
-  background: url('./back.png');
+  background: url("./back.png");
   background-position: center;
   background-repeat: no-repeat;
   place-items: center;
@@ -337,9 +337,12 @@ code {
 .feature__banner {
   padding: 148px 0px;
   background-image: linear-gradient(
-    90deg,rgba(255,130,168,.5),rgba(255,226,151,.5));
-    display: flex;
-    justify-content: center;
+    90deg,
+    rgba(255, 130, 168, 0.5),
+    rgba(255, 226, 151, 0.5)
+  );
+  display: flex;
+  justify-content: center;
 }
 
 .feature__banner {
@@ -401,7 +404,8 @@ code {
   flex: 0.6;
 }
 
-.footer__menu__title, .footer__apps__title {
+.footer__menu__title,
+.footer__apps__title {
   font-weight: bold;
 }
 
