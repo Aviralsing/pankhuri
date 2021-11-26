@@ -1,24 +1,26 @@
 * {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   --white: #fff;
   --black: #4a4a4a;
   --grey: #d2d2d2;
   --brand-red: #ed1164;
   --brand-blue: #7624d3;
   --brand-orange: #fa6400;
+  margin: 0;
+  padding: 0;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -29,7 +31,7 @@ code {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  background-image: url('./hb-banner.jpeg');
+  background-image: url("./hb-banner.jpeg");
 }
 
 .jumbotron__nav {
@@ -128,7 +130,7 @@ code {
 .card__header__content {
   display: flex;
   width: 100%;
-  background-color: #00000057;
+  background-color: #0000003f;
   position: absolute;
   bottom: 3px;
   padding: 16px;
@@ -164,17 +166,286 @@ code {
 
 .card__bookmark::after {
   content: "";
-    position: absolute;
-    height: 1px;
-    width: 0;
-    display: block;
-    border: 12px solid var(--brand-red);
-    border-right-color: transparent;
-    left: 85%;
-    top: 0
+  position: absolute;
+  height: 1px;
+  width: 0;
+  display: block;
+  border: 12px solid var(--brand-red);
+  border-right-color: transparent;
+  left: 85%;
+  top: 0;
 }
 
 .card__header__content__divider {
   margin: 0px 10px;
   border-left: 1px solid white;
+}
+
+.profile__card {
+  text-align: center;
+  background-color: var(--white);
+  padding: 1.25rem;
+  border-radius: 30px;
+  position: relative;
+  width: 280px;
+  height: 100%;
+  margin: 16px;
+}
+
+.profile__card__image {
+  /* position: absolute; */
+  z-index: -1;
+}
+
+.profile__card__content:last-child {
+  border: 0;
+}
+
+.profile__card__container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+
+.profile__card__content {
+  padding: 8px 16px;
+  /* border-right: 1px solid #BFBFBF; */
+}
+
+.profile__card__divider {
+  border-right: 1px solid #7624d32f;
+}
+
+.profile__card__title {
+  margin-top: 20px;
+  color: var(--brand-blue);
+}
+
+.profile__card__subtitle {
+  font-weight: 500;
+  margin-top: 8px;
+  color: #363636;
+}
+
+.profile__card__content__title {
+  font-weight: bold;
+  color: var(--brand-blue);
+}
+
+.profile__card__content__subtitle {
+  font-size: 13px;
+  margin-top: 4px;
+  font-weight: 400;
+}
+
+.profile__card__image img {
+  height: 152px;
+  width: 152px;
+  margin-top: -5.25em;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.banner {
+  padding: 64px 0px;
+  background: linear-gradient(
+    0deg,
+    rgba(222, 123, 224, 0.2),
+    rgba(165, 112, 242, 0.2)
+  );
+}
+
+.banner__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 128px;
+}
+
+.banner__title {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--brand-blue);
+  text-align: center;
+}
+
+.profile__card__cta {
+  background-color: #3d0083;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  border-radius: 36px;
+  margin: 24px 0px 0px 0px;
+}
+
+.card__bookmark__secondary::before {
+  border-top: 6px solid var(--brand-blue);
+}
+
+.card__bookmark__secondary {
+  background-color: var(--brand-blue);
+}
+
+.card__bookmark__secondary::after {
+  border: 12px solid var(--brand-blue);
+  border-right-color: transparent;
+}
+
+.review__banner {
+  padding: 64px 0px;
+  background: white;
+  display: grid;
+  background: url('./back.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  place-items: center;
+}
+
+.review__banner__title {
+  font-size: 36px;
+  font-weight: bold;
+  color: var(--brand-orange);
+  text-align: center;
+}
+
+.review__card {
+  background-image: linear-gradient(270deg, #414141, #000);
+  padding: 2.5rem 1.625rem;
+  padding-top: 4rem;
+  color: white;
+  margin-top: 72px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 24px;
+}
+
+.review__card__subtitle {
+  color: white;
+  font-size: 18px;
+  margin: 24px 0px;
+  line-height: 1.8;
+}
+
+.review__card__content__title {
+  padding-top: 84px;
+}
+
+.feature__banner {
+  padding: 148px 0px;
+  background-image: linear-gradient(
+    90deg,rgba(255,130,168,.5),rgba(255,226,151,.5));
+    display: flex;
+    justify-content: center;
+}
+
+.feature__banner {
+  background-color: white;
+}
+
+.feature__card {
+  padding: 3rem;
+  background-color: white;
+  border-radius: 24px;
+  width: 460px;
+  margin: 24px;
+}
+
+.feature__card__image {
+  margin-top: -8rem;
+}
+
+.feature__card__image img {
+  height: 154px;
+}
+
+.feature__card__cta {
+  background-color: #3d0083;
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+  display: block;
+  padding: 16px;
+  text-decoration: none;
+  border-radius: 36px;
+  text-align: center;
+  margin: 24px 0px 0px 0px;
+}
+
+.feature__card__title {
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
+
+.feature__card__subtitle {
+  margin-bottom: 54px;
+  line-height: 1.2;
+  font-weight: 500;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 4.375rem;
+  padding-bottom: 4.375rem;
+  background-color: #201a27;
+  color: var(--white);
+}
+
+.footer__menu {
+  display: flex;
+  justify-content: space-between;
+  flex: 0.6;
+}
+
+.footer__menu__title, .footer__apps__title {
+  font-weight: bold;
+}
+
+.footer__apps__image {
+  margin: 16px 0px 28px 0;
+}
+
+.footer__menu__list {
+  list-style: none;
+  margin-top: 24px;
+}
+
+.footer__menu__list__element {
+  margin: 18px 0px;
+  font-weight: 500;
+  transition: all 0.6s;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer__menu__list__element i {
+  margin-right: 8px;
+}
+
+.footer__menu__list__element:hover {
+  color: var(--brand-red);
+}
+
+.footer__wp {
+  display: flex;
+  align-items: center;
+  margin-top: 72px;
+}
+
+.footer__wp__content {
+  margin-left: 8px;
+}
+
+.footer__wp__title {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.footer__wp__subtitle {
+  font-size: 28px;
+  font-weight: bold;
 }
