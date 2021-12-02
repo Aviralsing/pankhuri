@@ -31,7 +31,9 @@ code {
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  background-image: url("./hb-banner.jpeg");
+  background-image: url("./pexels-ron-lach-8154655@2x.png");
+  justify-content: center;
+  padding :inherit;
 }
 
 .jumbotron__nav {
@@ -43,9 +45,10 @@ code {
 .jumbotron__content {
   flex: 1;
   display: flex;
-  padding: 36px;
+  padding: 2px;
   flex-direction: column;
-  justify-content: center;
+  justify-content: top;
+  align-self: center;
 }
 
 .jumbotron__content__title {
@@ -55,9 +58,22 @@ code {
 }
 
 .jumbotron__content__subtitle {
-  font-size: 36px;
+  font-size: 30px;
   margin-top: 24px;
   color: white;
+}
+
+.view__all__opening__link__element{
+  display: flex;
+  color: var(--white);
+  text-decoration: none;
+  padding: 12px 2px;
+  background-color: #ED1164;
+  justify-content: center;
+  margin-top: 8px;
+  border-radius: 24px;
+  width:25%;
+
 }
 
 .link {
@@ -77,10 +93,14 @@ code {
   border-radius: 12px;
   width: 300px;
   display: flex;
+  justify-content:center;
   flex-direction: column;
-  margin: 24px;
+  margin-top: -225px;
+  margin-left: 25px;
+  margin-right:25px;
+  margin-bottom: 100px;
   position: relative;
-  min-height: 400px;
+  min-height: 200px;
   border: 1px solid #e0e0e0;
 }
 
@@ -181,10 +201,87 @@ code {
   border-left: 1px solid white;
 }
 
+.para {
+  text-align: center;
+  padding: 3rem;
+  margin-top: 0px;
+  
+}
+
+.paragraph_header{
+  color: var(--brand-red);
+  margin-bottom: 30px;
+  width: 879px 285px;
+  height:44px 828px;
+
+}
+
+.paragraph_sub_heading{
+  margin-bottom: 30px;
+  width: 850px 299px;
+  height:150px 911px;
+  font-weight: 600;
+  size: 18px;
+
+}
+
+.paragraph_sub_heading_1{
+  margin-bottom: 30px;
+  width: 728px 361px;
+  height:87px 1103px;
+  color: var(--brand-blue);
+  size: 21px;
+
+}
+
+.paragraph_sub_heading_2{
+  margin-bottom: 30px;
+  width: 858px 291px;
+  height:86px 1232px;
+  size: 18px;
+  font-weight: 600;
+
+}
+
+.investor_banner{
+  padding: 64px 0px;
+  background-color: #eceaea;
+  width:1024px;
+  height: 643px 1391px;
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.investor__logo{
+  width: 239px;
+  height: 148px 1498px;
+  background-color: #ffffff;
+  top:1498px;
+
+}
+
+.investor_card{
+  
+}
+
+.join_us_now__link__element{
+  display: flex;
+  color: var(--white);
+  text-decoration: none;
+  padding: 12px 2px;
+  background-color: #ED1164;
+  justify-content: center;
+  margin-top: 8px;
+  border-radius: 24px;
+  width:25%;
+}
+
 .profile__card {
   text-align: center;
   background-color: var(--white);
-  padding: 1.25rem;
+  padding: 10rem;
   border-radius: 30px;
   position: relative;
   width: 280px;
@@ -209,7 +306,7 @@ code {
 
 .profile__card__content {
   padding: 8px 16px;
-  /* border-right: 1px solid #BFBFBF; */
+  
 }
 
 .profile__card__divider {
@@ -245,6 +342,8 @@ code {
   object-fit: cover;
   border-radius: 50%;
 }
+
+
 
 .banner {
   padding: 64px 0px;
@@ -334,35 +433,32 @@ code {
   padding-top: 84px;
 }
 
-.feature__banner {
-  padding: 148px 0px;
-  background-image: linear-gradient(
-    90deg,
-    rgba(255, 130, 168, 0.5),
-    rgba(255, 226, 151, 0.5)
-  );
+.investor__banner {
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 643px;
+  width:1024;
 }
 
-.feature__banner {
-  background-color: white;
-}
-
-.feature__card {
-  padding: 3rem;
-  background-color: white;
-  border-radius: 24px;
-  width: 460px;
+.investor__card {
+  padding: 0rem;
+  background-color: #f2f2f2;
+  border-radius: 0px;
+  width: 143px;
+  height: 180px;
   margin: 24px;
+  
 }
 
-.feature__card__image {
-  margin-top: -8rem;
-}
 
 .feature__card__image img {
-  height: 154px;
+  display:flex;
+  height: 130px;
+  width: 130px;
+  align-items: center;
+  justify-content: center;
 }
 
 .feature__card__cta {
@@ -379,14 +475,13 @@ code {
 }
 
 .feature__card__title {
-  margin-top: 36px;
-  margin-bottom: 36px;
+  margin-top: 12px;
+  margin-bottom: 7px;
 }
 
 .feature__card__subtitle {
-  margin-bottom: 54px;
   line-height: 1.2;
-  font-weight: 500;
+  font-weight: 50;
 }
 
 .footer {

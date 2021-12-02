@@ -81,7 +81,7 @@ function Card(props) {
               class="card__body__subtitle__link__element"
               href="https://pankhuri.co/register/771"
             >
-              <span>Buy Now</span>
+              <span>Apply now</span>
               <strong>
                 <span>Rs {props.price}/-</span>
               </strong>
@@ -122,7 +122,15 @@ function Jumbotron(props) {
       <div className="jumbotron__content">
         <div className="jumbotron__content__title">{props.title}</div>
         <div className="jumbotron__content__subtitle">{props.subtitle}</div>
-      </div>
+           <nav className="view_all_opening_link">
+            <a
+              class="view__all__opening__link__element"
+              href="https\\"
+            >
+              <span>View all Openings</span>
+            </a>
+           </nav>
+        </div>
     </div>
   );
 }
@@ -164,18 +172,15 @@ function ProfileCard(props) {
   );
 }
 
-function FeatureCard(props) {
+function InvestorCard(props) {
   return (
-    <div className="feature__card">
-      <div className="feature__card__image">
+    <div className="investor__card">
+      <div className="investor__card__image">
         <img src={props.image} alt={props.title} />
       </div>
-      <h1 className="feature__card__title">{props.title}</h1>
-      <h2 className="feature__card__subtitle">{props.subtitle}</h2>
-      <a href="/" className="feature__card__cta">
-        Apply Now
-      </a>
-    </div>
+      <h4 className="investor__card__title">{props.title}</h4>
+      <h4 className="investor__card__subtitle">{props.subtitle}</h4>
+      </div>
   );
 }
 
@@ -268,25 +273,108 @@ function ReviewBanner(props) {
   );
 }
 
-function FeatureBanner(props) {
+function InvestorBanner(props) {
   return (
-    <div className="feature__banner">
-      <FeatureCard
+    <div className="investor_banner">
+      <div className="investor_logo">
+      <InvestorCard
         image={
-          "https://pankhuri.co/master-class/_next/image?url=%2Fmaster-class%2Fimg%2Ftrainer.svg&w=3840&q=75"
+          "C:\Users\Lenovo\test\test\src\images\sequoia.png"
         }
-        title="Become a Trainer"
-        subtitle="Passionate about what you do? Want to teach others?"
-      />
-      <FeatureCard
+       />
+       <InvestorCard
         image={
-          "https://pankhuri.co/master-class/_next/image?url=%2Fmaster-class%2Fimg%2Freseller.svg&w=3840&q=75"
+          "C:\Users\Lenovo\test\test\src\images\indiaQuotent.png"
         }
-        title="Become a Reseller"
-        subtitle="Want to make some extra money? 15,000 to 80,000 per month."
-      />
+       />
+       <InvestorCard
+        image={
+          "C:\Users\Lenovo\test\test\src\images\taurus.png"
+        }
+       />
+      </div>
+    <div className="investor_card">
+       <InvestorCard
+        image={
+          "C:\Users\Lenovo\test\test\src\images\kunal shah.png"
+        }
+        title="Kunal Shah"
+        subtitle="(cred)"
+        />
+          <h3>Kunal Shah</h3>
+       <InvestorCard
+        image={
+          "C:\Users\Lenovo\test\test\src\images\farid ahsan.png"
+        }
+        title="Farid Ahsan"
+        subtitle="(Share Chat)"
+       />
+       <InvestorCard
+        image={
+          "C:\Users\Lenovo\test\test\src\images\sai srinivas.png"
+        }
+        title="Sai Srinivas"
+        subtitle="(Mpl)"
+       />
+       <InvestorCard
+        image={
+          "C:\Users\Lenovo\test\test\src\images\krishnan Menon.png"
+        }
+        title="Krishnan Menon"
+        subtitle="(Bukukas)"
+       />
+       <InvestorCard
+        image={
+          "src\images\sweta Rau.png"
+        }
+        title="Sweta Rau"
+        subtitle="(White Ventures)"
+        />
+        </div>
+        <nav className="join us now">
+            <a
+              class="join_us_now__link__element"
+              href="https\\"
+            >
+              <span>Join Us Now</span>
+            </a>
+        </nav>
+        
     </div>
+    
   );
+}
+
+function Paragraph(props) {
+  return (
+    <div className="para">
+    <div className="paragraph_header"><h1>Whats the buzz all about? </h1></div>.
+    <div className="paragraph_sub_heading">Pankhuri aims to enable 120 million indian women to learn and shop through live streaming<br/><div> and short videos. Our beauty community is a place where you can watch experts talk about <br/></div>what they know and love,ask them question and discuss it with other cool members all in<br/>real time. Our short video app opens up endless possibilities for women with interest in<br/> fashion, beaty and lifestyle.</div>
+      <div className="paragraph_sub_heading_1"><h3>"Backed by marquee investors & Sequoia Capital, Pankhuri was<br/> started by Pankhuri Srivastav who previously co-founded<br/> grabhouse and sold it to Quikr."</h3></div>
+      <div className="paragraph_sub_heading_2">Sequoia Capital is an American venture capital firm. The firm is headquatered in Menlo Park,<br/>California and mainly focuses on the technoly industry. it has backed companies that now<br/> control $1.4 trillion of combined stock market value.</div>
+      </div>
+  )
+}
+
+function Investor(props) {
+  return (
+    <div className="investor_box">
+      <div className="investor_header">Our Investors</div>
+      <row>
+      <div className="investor_top">
+        <div className="invester_logo">
+            <img src={require('./images/sequoia.png')}alt="sequoia_logo"/>
+        </div>
+        <div className="invester_logo2">
+            <img src={require('./images/indiaQuotent.png')} alt="indiaQuotient_logo"/>
+        </div>
+        <div className="invester_logo3">
+        <img src={require('./images/taurus.png')} alt="taurus logo"/>
+        </div>
+        </div>
+        </row>
+        </div>
+  )
 }
 
 function Footer(props) {
@@ -324,8 +412,10 @@ function Footer(props) {
           <div className="footer__menu__title">Company</div>
           <ul className="footer__menu__list">
             <li className="footer__menu__list__element">Home</li>
+            <li className="footer__menu__list__element">MasterClass</li>
             <li className="footer__menu__list__element">About</li>
-            <li className="footer__menu__list__element">Blog</li>
+            <li className="footer__menu__list__element">Careers</li>
+            <li className="footer__menu__list__element">Press</li>
           </ul>
         </div>
         <div className="footer__menu__content">
@@ -389,8 +479,8 @@ class App extends React.Component {
     return (
       <>
         <Jumbotron
-          title="India's Most Trusted Masterclasses"
-          subtitle="Making Beauty Accessible & Affordable"
+          title="Be a part of the big change."
+          subtitle="Build the future of Content,Community&Commerce."
         />
         <Row
           style={{
@@ -403,7 +493,7 @@ class App extends React.Component {
             type="Live"
             mode={"live"}
             image="https://pankhuri.co/master-class/_next/image?url=https%3A%2F%2Fmedia.pankhuri.co%2FKhadiData%2Fcourse_705%2Fcid705_131946.jpg&w=3840&q=75"
-            title="Making Of Henna Paste And Cone"
+            title="Product Manager"
             author="Komal"
             price={25}
             date="31 Oct"
@@ -439,46 +529,14 @@ class App extends React.Component {
             date="31 Oct"
             duration="60 minutes"
           />
-          <Card
-            type="Recorded"
-            mode={"recorded"}
-            image="https://pankhuri.co/master-class/_next/image?url=https%3A%2F%2Fimg.pankhuri.co%2Fcourse_151%2Fcid151_293355.jpg%3Fheight%3D300&w=3840&q=75"
-            title="Making Of Henna Paste And Cone"
-            author="Manali Kawale"
-            price={11}
-            date="Recording"
-          />
-          <Card
-            type="Recorded"
-            mode={"recorded"}
-            image="https://pankhuri.co/master-class/_next/image?url=https%3A%2F%2Fimg.pankhuri.co%2Fcourse_151%2Fcid151_293355.jpg%3Fheight%3D300&w=3840&q=75"
-            title="Making Of Henna Paste And Cone"
-            author="Manali Kawale"
-            price={11}
-            date="Recording"
-          />
-          <Card
-            type="Recorded"
-            mode={"recorded"}
-            image="https://pankhuri.co/master-class/_next/image?url=https%3A%2F%2Fimg.pankhuri.co%2Fcourse_151%2Fcid151_293355.jpg%3Fheight%3D300&w=3840&q=75"
-            title="Making Of Henna Paste And Cone"
-            author="Manali Kawale"
-            price={11}
-            date="Recording"
-          />
-          <Card
-            type="Recorded"
-            mode={"recorded"}
-            image="https://pankhuri.co/master-class/_next/image?url=https%3A%2F%2Fimg.pankhuri.co%2Fcourse_151%2Fcid151_293355.jpg%3Fheight%3D300&w=3840&q=75"
-            title="Making Of Henna Paste And Cone"
-            author="Manali Kawale"
-            price={11}
-            date="Recording"
-          />
+          
         </Row>
+        <Paragraph />
+        <InvestorBanner />
         <Banner />
+        
         <ReviewBanner />
-        <FeatureBanner />
+        
         <Footer />
       </>
     );
